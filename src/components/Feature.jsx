@@ -21,7 +21,7 @@ const Feature = ({ cover, title, lang = 'ar', icon, content , IcWidth, IcHight }
       initial="hidden"
       whileInView="show"
       whileTap={{ scale: 0.895 }}
-      viewport={{  amount: 0.3 }}
+      viewport={{ once:true ,  amount: 0.3 }}
     >
       <motion.div className="h-full w-full md:h-[309px] md:w-[308px] flex flex-1 items-center" variants={imageVariant}>
          <motion.img

@@ -1,5 +1,4 @@
-// src/containers/Customers.jsx
-import React, { useEffect, useRef } from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { icon_39, icon_40 } from './import';
 import "slick-carousel/slick/slick.css";
@@ -49,8 +48,8 @@ const imgVariant = {
 const Customers = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language === 'ar' ? 'ar' : 'en';
-  const sliderRef = useRef(null);
-  const resizeTimer = useRef(null);
+ 
+  
 
   const settings = {
     className: 'customers-slider relative w-full h-full',
@@ -70,48 +69,7 @@ const Customers = () => {
     ],
   };
 
-  useEffect(() => {
-    // helper to safely call slick's resize handler
-    const triggerSlickResize = () => {
-      try {
-        if (sliderRef.current && sliderRef.current.innerSlider && typeof sliderRef.current.innerSlider.onWindowResized === 'function') {
-          sliderRef.current.innerSlider.onWindowResized();
-        }
-      } catch (err) {
-        // swallow - defensively avoid crash
-        // console.warn("slick resize call failed", err);
-      }
-    };
 
-    // on mount, give browser a tick to finish layout then trigger resize
-    if (typeof window !== 'undefined') {
-      // small delay helps when CSS/tailwind classes are still being applied
-      const t = setTimeout(() => triggerSlickResize(), 50);
-      // ensure another call after 300ms in case fonts or images changed layout
-      const t2 = setTimeout(() => triggerSlickResize(), 300);
-
-      // debounce resize handler
-      const onResize = () => {
-        if (resizeTimer.current) clearTimeout(resizeTimer.current);
-        resizeTimer.current = setTimeout(() => {
-          triggerSlickResize();
-          resizeTimer.current = null;
-        }, 120); // 120ms debounce
-      };
-
-      window.addEventListener('resize', onResize);
-      window.addEventListener('orientationchange', onResize);
-
-      return () => {
-        clearTimeout(t);
-        clearTimeout(t2);
-        window.removeEventListener('resize', onResize);
-        window.removeEventListener('orientationchange', onResize);
-        if (resizeTimer.current) clearTimeout(resizeTimer.current);
-      };
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <motion.section
@@ -141,7 +99,7 @@ const Customers = () => {
         className="relative h-full z-0 overflow-hidden w-full p-[1rem] flex justify-center items-center"
         variants={containerVariants}
       >
-        <Slider {...settings} ref={sliderRef}>
+        <Slider {...settings}>
           {customers.map((item, i) => (
             <div key={item.id ?? i} className="flex justify-center items-center p-2 w-full h-full">
               <motion.div
