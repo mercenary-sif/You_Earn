@@ -52,7 +52,7 @@ const Customers = () => {
   
 
   const settings = {
-    className: 'customers-slider relative flex-col md:flex-row gap-[2rem] w-full h-full',
+    className: 'relative flex flex-col md:flex-row gap-[2rem] w-full h-full',
     dots: false,
     infinite: true,
     slidesToShow: 4,
