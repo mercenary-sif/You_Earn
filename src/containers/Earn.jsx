@@ -74,7 +74,7 @@ const Earn = ({ title, icon, hoverIcon, data = [] , IcWidth ,IcHight }) => {
 
         {/* Grid / Row of Features */}
         <motion.div
-          className="flex flex-col flex-wrap xl:flex-nowrap lg:flex-row justify-center items-center gap-[2rem] p-2 md:p-[2rem]"
+          className="flex flex-col flex-wrap xl:flex-nowrap lg:flex-row justify-center items-center mt-[3rem] md:mt-2 gap-[2rem] p-2 md:p-[2rem]"
           variants={containerVariants}
         >
           {data.map((item, i) => {
