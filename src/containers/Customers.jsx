@@ -52,7 +52,7 @@ const Customers = () => {
   
 
   const settings = {
-    className: 'customers-slider relative w-full h-full',
+    className: 'customers-slider relative flex-col md:flex-row gap-[2rem] w-full h-full',
     dots: false,
     infinite: true,
     slidesToShow: 4,
@@ -101,7 +101,7 @@ const Customers = () => {
       >
         <Slider {...settings}>
           {customers.map((item, i) => (
-            <div key={item.id ?? i} className="flex flex-col md:flex-row justify-center items-center p-2 w-full h-full">
+            <div key={item.id ?? i} className="flex  justify-center items-center p-2 w-full h-full">
               <motion.div
                 className="flex justify-center items-center w-full h-full"
                 variants={itemVariant}
