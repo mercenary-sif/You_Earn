@@ -101,7 +101,7 @@ const Customers = () => {
       >
         <Slider {...settings}>
           {customers.map((item, i) => (
-            <div key={item.id ?? i} className="flex justify-center items-center p-2 w-full h-full">
+            <div key={item.id ?? i} className="flex flex-col md:flex-row justify-center items-center p-2 w-full h-full">
               <motion.div
                 className="flex justify-center items-center w-full h-full"
                 variants={itemVariant}
