@@ -54,14 +54,14 @@ const Footer = () => {
       variants={parentVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{once: true , amount: 0.4 }}
+      viewport={{once: true , amount: 0.19 }}
     >
       {/* Top row with logo + columns */}
       <motion.div className="flex flex-col lg:flex-row justify-around items-center lg:items-start gap-[4rem] w-full" variants={childVariants}>
         {/* Logo circle */}
         <motion.div className="flex w-[175px] h-[175px] border-[5px] border-transparent hover:border-[#00151A] bg-[#26B2D2] shadow-dual-cyan rounded-full p-[2rem] items-center justify-center cursor-pointer"
                     variants={childVariants}
-                    viewport={{ amount: 0.6 }}>
+                    viewport={{ amount: 0.5 }}>
           <img className="object-fill w-[103px] h-[59px]" src={logo} alt="logo" />
         </motion.div>
 
