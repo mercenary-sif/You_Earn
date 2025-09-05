@@ -1,0 +1,6 @@
+export {default as Header} from './Header'
+export {default as WhyChooseUs} from './WhyChooseUs'
+export {default as AboutUs} from './AboutUs'
+export {default as WinningPillars} from './Earn'
+export {default as WinningApplications} from './Earn'
+export {default as OurCustomers} from './Customers'

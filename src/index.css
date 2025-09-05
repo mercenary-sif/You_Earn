@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  /* Fonts */
+  --font-1: "Cairo", sans-serif;
+  --font-2: "Lexend", sans-serif;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes swing {
+  0%   { transform: translateX(0)    rotate(0deg); }
+  25%  { transform: translateX(-12px) rotate(195deg); } /* move left & rotate clockwise */
+  50%  { transform: translateX(0)    rotate(0deg); }
+  75%  { transform: translateX(12px)  rotate(-195deg); } /* move right & rotate counter-clockwise */
+  100% { transform: translateX(0)    rotate(0deg); }
+}
+
+/* run the animation while parent .group is hovered */
+.group:hover .hover-anim {
+  animation: swing 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes icon-swing {
+  0%   { transform: translateX(0)    rotate(0deg); }
+  25%  { transform: translateX(-14px) rotate(5deg); } /* move left & rotate clockwise */
+  50%  { transform: translateX(0)    rotate(0deg); }
+  75%  { transform: translateX(14px)  rotate(-5deg); } /* move right & rotate counter-clockwise */
+  100% { transform: translateX(0)    rotate(0deg); }
+}
+
+/* run only while parent .group is hovered */
+.group:hover .hover-animation {
+  animation: icon-swing 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* wrapper from settings.className -> ".absolute-slider" */
+.absolute-slider {
+  position: relative;
+}
+/* slick-list contains the visible area; keep overflow hidden */
+.absolute-slider .slick-list {
+  overflow: hidden;
+}
+/* keep track relative so slides absolute inside it */
+.absolute-slider .slick-track {
+  position: relative !important;
+  height: auto;
+}
+/* make each slide absolute and stacked (only active slide should be visible due to slick adding .slick-active) */
+.absolute-slider .slick-slide {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+/* the active slide is shown */
+.absolute-slider .slick-slide.slick-active {
+  opacity: 1;
+}
+/* ensure dots overlay nicely */
+.absolute-slider .slick-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
