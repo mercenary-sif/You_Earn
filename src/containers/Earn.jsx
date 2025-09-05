@@ -48,6 +48,7 @@ const Earn = ({ title, icon, hoverIcon, data = [] , IcWidth ,IcHight }) => {
         variants={parentVariants}
         initial="hidden"
         whileInView="show"
+        className='flex flex-col justify-center items-center md:items-start w-full'
         viewport={{once: true , amount: 0.1 }}
       >
         {/* Title Badge */}
