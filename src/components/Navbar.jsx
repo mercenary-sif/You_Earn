@@ -246,7 +246,7 @@ const Menu = ({ toggleLang, lang, open = true, closeMenu , t}) => {
       <div className="flex group items-center  justify-start gap-2  cursor-pointer w-[90%] p-[2rem]">
         <img className="w-[22px] h-[22px] object-fill group-hover:hidden" src={icon_1} alt="icon" />
         <img className="w-[22px] h-[22px] object-fill hidden group-hover:block" src={icon_2} alt="icon" />
-        <p className="text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start text-[22px]">
+        <p className={`text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start ${lang === "ar" ? "text-[18px]" : "text-[16px]"} `}>
           {t("nav.home")}
         </p>
       </div>
@@ -255,7 +255,7 @@ const Menu = ({ toggleLang, lang, open = true, closeMenu , t}) => {
       <div className="flex group items-center justify-start gap-2 cursor-pointer w-full p-[2rem]">
         <img className="w-[22px] h-[22px] object-fill group-hover:hidden" src={icon_3} alt="icon" />
         <img className="w-[22px] h-[22px] object-fill hidden group-hover:block" src={icon_4} alt="icon" />
-        <p className="text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start text-[22px]">
+        <p className={`text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start ${lang === "ar" ? "text-[18px]" : "text-[16px]"} `}>
           {t("nav.services")}
         </p>
       </div>
@@ -263,7 +263,7 @@ const Menu = ({ toggleLang, lang, open = true, closeMenu , t}) => {
       <div className="flex group items-center justify-start gap-2  cursor-pointer w-full p-[2rem]">
         <img className="w-[22px] h-[22px] object-fill group-hover:hidden" src={icon_8} alt="icon" />
         <img className="w-[22px] h-[22px] object-fill hidden group-hover:block" src={icon_9} alt="icon" />
-        <p className="text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start text-[22px]">
+        <p className={`text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start ${lang === "ar" ? "text-[18px]" : "text-[16px]"} `}>
           {t("nav.sales")}
         </p>
       </div>
@@ -271,7 +271,7 @@ const Menu = ({ toggleLang, lang, open = true, closeMenu , t}) => {
       <div className="flex group items-center w-full justify-start gap-2  p-[2rem] cursor-pointer">
         <img className="w-[32px] h-[32px] object-fill group-hover:hidden" src={icon_10} alt="icon" />
         <img className="w-[32px] h-[32px] object-fill hidden group-hover:block" src={icon_11} alt="icon" />
-        <p className="text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start text-[22px]">
+        <p className={`text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start ${lang === "ar" ? "text-[18px]" : "text-[16px]"} `}>
           {t("nav.providers")}
         </p>
       </div>
@@ -279,7 +279,7 @@ const Menu = ({ toggleLang, lang, open = true, closeMenu , t}) => {
       <div className="flex group items-center justify-start gap-2 w-full p-[2rem] cursor-pointer">
         <img className="w-[32px] h-[32px] object-fill group-hover:hidden" src={icon_5} alt="icon" />
         <img className="w-[32px] h-[32px] object-fill hidden group-hover:block" src={icon_7} alt="icon" />
-        <p className="text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start text-[22px]">
+        <p className={`text-[#E6E6E6] group-hover:text-[#2CD8FF] font-normal text-start ${lang === "ar" ? "text-[18px]" : "text-[16px]"} `}>
           {t("nav.contact")}
         </p>
       </div>
@@ -291,7 +291,7 @@ const Menu = ({ toggleLang, lang, open = true, closeMenu , t}) => {
             toggleLang("ar");
             closeMenu();
           }}
-          className={`w-full text-start text-[22px] px-2 py-2 ${lang === "ar" ? "text-[#2CD8FF]" : "text-[#E6E6E6]"}`}
+          className={`w-full text-start ${lang === "ar" ? "text-[18px]" : "text-[16px]"} px-2 py-2 ${lang === "ar" ? "text-[#2CD8FF]" : "text-[#E6E6E6]"}`}
         >
           {t("nav.arabic")} 🇸🇦
         </button>
@@ -300,7 +300,7 @@ const Menu = ({ toggleLang, lang, open = true, closeMenu , t}) => {
             toggleLang("en");
             closeMenu();
           }}
-          className={`w-full text-start px-2 text-[22px] py-2 ${lang === "en" ? "text-[#2CD8FF]" : "text-[#E6E6E6]"}`}
+          className={`w-full text-start px-2 ${lang === "ar" ? "text-[18px]" : "text-[16px]"} py-2 ${lang === "en" ? "text-[#2CD8FF]" : "text-[#E6E6E6]"}`}
         >
           {t("nav.english")} 🇺🇸
         </button>

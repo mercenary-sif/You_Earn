@@ -49,7 +49,7 @@ const Card = ({
       initial="rest"
       animate="rest"
       whileHover="hover"
-      className={`${lang === "ar" ? "font-font-1" : "font-font-2"} group flex flex-col justify-start items-center gap-[2rem] p-[1rem] md:p-[3rem] border-[5px] border-transparent hover:border-[#00151A] rounded-[3rem] w-full md:w-[405px] h-[455px] lg:h-[535px] bg-[#FFFFFF] shadow-dual-cyan`}
+      className={`${lang === "ar" ? "font-font-1" : "font-font-2"} group flex flex-col justify-start items-center gap-[2rem] p-[1rem] md:p-[3rem] border-[5px] border-transparent hover:border-[#00151A] rounded-[3rem] w-full md:w-[405px] h-full md:h-[455px] lg:h-[535px] bg-[#FFFFFF] shadow-dual-cyan`}
       whileTap={{ scale: 0.895 }}
       style={{ WebkitTapHighlightColor: "transparent" }}
     >

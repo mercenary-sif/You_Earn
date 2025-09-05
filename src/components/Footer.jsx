@@ -54,7 +54,7 @@ const Footer = () => {
       variants={parentVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.4 }}
+      viewport={{once: true , amount: 0.4 }}
     >
       {/* Top row with logo + columns */}
       <motion.div className="flex flex-col lg:flex-row justify-around items-center lg:items-start gap-[4rem] w-full" variants={childVariants}>

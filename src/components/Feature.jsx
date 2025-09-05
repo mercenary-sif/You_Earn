@@ -35,14 +35,14 @@ const Feature = ({ cover, title, lang = 'ar', icon, content , IcWidth, IcHight }
          />
       </motion.div>
 
-      <div className="flex flex-[0.6] flex-col justify-center items-center p-[2rem] gap-[2rem]">
+      <div className="flex flex-[0.6] flex-col justify-center items-center p-2 md:p-[2rem] gap-[2rem]">
             <div className="flex w-full justify-start items-start gap-[1rem]">
                 <img src={icon} alt="icon"  className={`'object-fill h-[${IcHight}] w-[${IcWidth}]'`}/>
-                <h3 className={`text-[#00151A] font-semibold text-[18px]  ${lang ==='ar' ? "lg:text-[22px]": "lg:text-[20px]"}`}>
+                <h3 className={`text-[#00151A] font-bold text-[16px]  ${lang ==='ar' ? "lg:text-[22px]": "lg:text-[20px]"}`}>
                   {title}
                 </h3>
             </div>
-            <p  className={`text-[#00151A] font-semibold text-start leading-relaxed ${lang ==='ar' ? "text-[17px] lg:text-[18px]": "text-[15px] lg:text-[16px]"}`}>
+            <p  className={`text-[#00151A] font-semibold text-start leading-relaxed ${lang ==='ar' ? "text-[14px] lg:text-[18px]": "text-[13px] lg:text-[16px]"}`}>
                {content}
             </p>
       </div>

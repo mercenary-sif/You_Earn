@@ -32,7 +32,7 @@ const containerVariants = {
 
 const rowVariant = {
   hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.95, ease: 'easeOut' } },
+  show: { opacity: 1, y: 0, transition: { duration: 1.05, ease: 'easeOut' } },
 };
 
 const Earn = ({ title, icon, hoverIcon, data = [] , IcWidth ,IcHight }) => {
@@ -48,7 +48,7 @@ const Earn = ({ title, icon, hoverIcon, data = [] , IcWidth ,IcHight }) => {
         variants={parentVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ amount: 0.1 }}
+        viewport={{once: true , amount: 0.1 }}
       >
         {/* Title Badge */}
         <motion.div
